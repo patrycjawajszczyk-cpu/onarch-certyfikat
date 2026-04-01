@@ -317,7 +317,7 @@ async function sprawdz() {
           <div class="cert-details">
             <div class="detail-row">
               <div class="detail-label">Uczestnik</div>
-              <div class="detail-value">${c.imie_nazwisko.split(' ').map(w => w[0] + '*'.repeat(w.length - 1)).join(' ')}</div>
+              <div class="detail-value">${c.imie_nazwisko.trim().split(' ').filter(w=>w.length>0).map(w => w[0] + '*'.repeat(w.length - 1)).join(' ')}</div>
             </div>
             <div class="divider"></div>
             <div class="detail-row">
